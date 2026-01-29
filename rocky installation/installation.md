@@ -26,16 +26,17 @@ Device
 
 ## !Issues experienced after first boot!
 - dnf updates failed. COuld not download latest repo. Noticed server had no network configurations/no DHCP offer.
-- NIC was present but disconnected, meaning no internet access.
-- Network interfaces are not automatically broguht up. Discovered this by using 'NetworkManager.'
+- NIC interface was present but was disconnected, meaning that laptop could not connect to DHCP server and obtain the configurations necessary for internet access.
+- Network interfaces are not automatically up in some minimal installs. Discovered this by using 'NetworkManager.'
     - nmcli device status
 Solutions:
-- brought NIC interface up and i was able to update server with 'dnf update -y.'
+- brought the NIC interface up and it was able to communicate with the DHCP serve and get the proper network configurations.
     - nmcli con up ens1
+- Finally, I updated the server with the latest packages using,'dnf update -y.'
 
 
 ## Headless Server Setup
-- Goal: even if lid closes, the laptop will stay on and no go to sleep/suspend.
-- Edited the systemd logind config file and restarted logind.
-- Made sure SSH was installed, enabled, and worked properly. Hardened it by disabling root logins and requiring password authentication. Then, restarted sshd.
-- Removed DC battery from laptop. AC powered via the charging adapter.
+- Goal: even if lid closes, the laptop will stay on and not go to sleep/suspend. Allowing for remote access via cockpit GUI or SSHing into the CLI.
+- Edited the logind.conf file to disable the lid switch power0ff triggers, and then restarted logind to run with the new settings.
+- Made sure SSH tools were installed, enabled, and worked properly. Hardened SSH by disabling root logins and requiring password authentication. Then, restarted sshd.
+- Removed the physical DC battery from the laptop. It will now be AC powered via the charging adapter being plugged permanently. The DC battery now acts as emergency power backup.
