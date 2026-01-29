@@ -7,9 +7,9 @@
 
 
 ## !Problems when first connecting to web GUI!
-- received error messages when first attempting to access pi-hole web GUI.
-- network traffic was not being filtered through pi-hole even after giving it static IP and setting it up as default DNS on home router.
+1. received error messages when first attempting to access pi-hole web GUI.
+2. network traffic was not being filtered through pi-hole even after giving it static IP and setting it up as default DNS on home router.
 Solution:
-- Checked the firewall status on server, 'firewall-cmd --list-services,' which did no show http. I then set an allow/incoming http port 80 on firewall.
-Firewalld is set to deny/incoming, allow/outgoing. set SELinux to permissive instead of enforcing. Less restrictive when explicit rules are added to firewalld.
-- Set an allow rule for DNS port 53 on firewall.
+1. Checked the firewall status on server, 'firewall-cmd --list-services,' which did no show http as allowed. I then set an allow/outgoing http port 80 on firewall.
+Firewalld is set to deny/incoming, allow/outgoing traffic. I then set SELinux to permissive instead of enforcing, making it less restrictive when explicit rules are added to firewalld table.
+2. Made sure all devices connected to home network were using the pi-hole DNS filtering by Setting an allow/ougoing rule for DNS port 53 on the server firewall.
