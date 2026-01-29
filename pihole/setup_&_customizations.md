@@ -12,4 +12,4 @@
 Solutions:
 1. Checked the firewall status on server, 'firewall-cmd --list-services,' which did not show http on the allowed list. I then set an allow/outgoing http port 80 on firewall.
 Firewalld is set to deny/incoming, allow/outgoing traffic. I then set SELinux to permissive instead of enforcing, making it less restrictive when explicit rules are added to firewalld table.
-2. Made sure all devices connected to home network were using the pi-hole DNS filtering by Setting an allow/ougoing rule for DNS port 53 on the server firewall.
+2. Made sure all devices connected to home network were using the pi-hole DNS filtering by Setting an allow/outgoing rule for DNS port 53 on the server firewall.
