@@ -16,7 +16,7 @@ Headless Rocky Linux 9.7 server running:
 - Document failures and recovery
 
 ## Environment
-- OS: Rocky Linux 9.7 (Blue Onyx)
+- OS: Rocky Linux 9.7 (Blue Onyx), 64-bit
 - HW: Repurposed HP Beats 15 laptop (Headless)
 - Network: LAN + static IP
 - Clients: Linux Mint, Windows 11
