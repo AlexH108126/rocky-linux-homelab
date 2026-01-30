@@ -1,10 +1,9 @@
 ## [Rocky Linux 9.7 Installation - Headless Server Setup:]
-- hardware: HP Beats Laptop
+- Device: HP Beats Laptop
 - Role: Headless homelab server (Pi-hole, Cockpit, NAS)
 
 
 ## [Hardware]
-Device
 - laptop model: HP Beats 15 Notebook
 - CPU: AMD A10-7300 Radeon R6, 10 Compute Cores 4C+6G
 - RAM: 8GiB SODIMM DDR3 1600 MHZ
