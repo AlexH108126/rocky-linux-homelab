@@ -1,8 +1,8 @@
-## Purpose
+## [Purpose]
 Cockpit will be used as a web-based system management for my headless rocky linux server running on repurposed laptop hardware. The goal is to manage services, storage, network settings, and logs without installing a full desktop environment. This saves on resource utilization and can be remotely managed on any computer/smartphone connected to my network.
 
 
-## Installation
+## [Installation]
 - Cockpit is already included in the rocky linux repo by default. optionally, you can download it if it's not.
     - sudo dnf install cockpit -y
 - It runs as a systemd service and listens on TCP port 9090. you enable/confirm its service using, 'systemctl.'
@@ -11,7 +11,7 @@ Cockpit will be used as a web-based system management for my headless rocky linu
 - once enabled, you can access the cockpit GUI from a browser by inputting, 'http://SERVER_IP:9090.' the default port number for cockpit GUI is 9090, but you can change it later on if you wish.
 
 
-## !Troubleshooting Cockpit!
+## [!Troubleshooting Cockpit!]
 1. Cockpit web UI was unreachable from the browser. connection to the http path failed.
 2. SELinux warnings related to samba and custom NAS directories where identified thanks to cockpit's GUI visuals.
 3. Mislabeled directories were popping up in SELinux logs.
