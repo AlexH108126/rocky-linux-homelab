@@ -1,8 +1,8 @@
-## Purpose
+## [Purpose]
 I wanted to see what made DNS function and operate properly. The goal was to have a more in-depth understanding of how a DNS server worked and what services made it efficient. I did not use unbound services as a local DNS resolver this time as that needs more configuring and troubleshooting.
 
 
-## Installation
+## [Installation]
 - Installed prerequisites, 'dnf install -y curl'
 - Installed Pi-hole, 'curl -sSL https://install.pi-hole.net | bash'
 - During setup: chose LAN interface, public upstream DNS (Quad9), accept defaults
@@ -10,7 +10,7 @@ I wanted to see what made DNS function and operate properly. The goal was to hav
 - verified i was able to access web GUI and entered in the default credentials, which i later changed and added 2FA to the pi-hole GUI login.
 
 
-## !Troubleshooting pi-hole!
+## [!Troubleshooting pi-hole!]
 1. received error messages when first attempting to access pi-hole web GUI.
 2. network traffic was not being filtered through pi-hole after giving it a static IP and setting it up as default DNS on home router.
 
