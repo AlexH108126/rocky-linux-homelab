@@ -29,7 +29,7 @@
 - Network interfaces are not automatically up in some minimal installs. Discovered this by using 'NetworkManager.'
     - nmcli device status
 Solutions:
-- brought the NIC interface up and it was able to communicate with the DHCP serve and get the proper network configurations.
+- brought the NIC interface up and it was able to communicate with the DHCP server and get the proper network configurations.
     - nmcli con up ens1
 - Finally, I updated the server with the latest packages using,'dnf update -y.'
 
