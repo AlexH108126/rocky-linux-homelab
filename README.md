@@ -1,7 +1,7 @@
-# rocky-linux-homelab
+# [Rocky-Linux-Homelab] 🐧
 Rocky linux server homelab setup
 
-## Overview
+## [Overview]
 Headless Rocky Linux 9.7 server running:
 - Pi-hole DNS filtering
 - Cockpit web management
@@ -9,19 +9,19 @@ Headless Rocky Linux 9.7 server running:
 - SSH Key-based access
 - Firewalld & SELinux configurations
 
-## Goals
+## [Goals]
 - Learn enterprise-style Linux administration
 - Practice networking & troubleshooting
 - Implement remote management
 - Document failures and recovery
 
-## Environment
+## [Environment]
 - OS: Rocky Linux 9.7 (Blue Onyx), 64-bit
 - HW: Repurposed HP Beats 15 laptop (Headless)
 - Network: LAN + static IP
 - Clients: Linux Mint, Windows 11
 
-## Skills developed
+## [Developing Skills]
 - Basic Linux networking (NM, DNS, NTP)
 - Firewalld & SELinux troubleshooting/configuring
 - Samba permissions & remote mounts
