@@ -11,7 +11,7 @@ Headless Rocky Linux 9.7 server running:
 
 ## Goals
 - Learn enterprise-style Linux administration
-- Practice networking & DNS troubleshooting
+- Practice networking & troubleshooting
 - Implement remote management
 - Document failures and recovery
 
