@@ -10,9 +10,10 @@ I wanted to see what made DNS function and operate properly. The goal was to hav
 - verified i was able to access web GUI and entered in the default credentials, which i later changed and added 2FA to the pi-hole GUI login.
 
 
-## !Problems when first connecting to web GUI!
+## !Troubleshooting pi-hole!
 1. received error messages when first attempting to access pi-hole web GUI.
 2. network traffic was not being filtered through pi-hole after giving it a static IP and setting it up as default DNS on home router.
+
 Solutions:
 1. Checked the firewall status on server, 'firewall-cmd --list-services,' which did not show http on the allowed list. I then set an allow/outgoing http port 80 on firewall.
 Firewalld is set to deny/incoming, allow/outgoing traffic. I then set SELinux to permissive instead of enforcing, making it less restrictive when explicit rules are added to firewalld table.
