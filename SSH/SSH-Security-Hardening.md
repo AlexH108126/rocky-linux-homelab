@@ -11,11 +11,11 @@ Linux mint:
     - default location: ~/.ssh/id_ed25519, enter a passphrase when prompted for one
     - Install the public keys on the rocky server: ssh-copy-id -i ~/.ssh/id_ed25519.pub user@SERVER_IP
     - keys are appended to: ~/.ssh/authorized_keys
-Windows 11:
+        Windows 11:
     - open up PuTTYgen
     - select 'Type: ed25519'
     - click generate
-    - save as: private key (.ppk), public key (copy text). **Private key neve leaves the clients
+    - save as: private key (.ppk), public key (copy text). **Private key never leaves the clients
     - SSH into server and edit authorized keys: sudo nano ~/.ssh/authorized_keys
     - paste in the public key and set permissions: chmod 600 ~/.ssh/authorized_keys
 - Verify key-based login works before any added hardening or you will be locked out remotely.
