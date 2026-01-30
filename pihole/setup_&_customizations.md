@@ -1,3 +1,7 @@
+## Purpose
+I wanted to see what made DNS function and operate properly. The goal was to have a more in-depth understanding of how a DNS server worked and what services made it efficient. I did not use unbound services as a local DNS resolver this time as that needs more configuring and troubleshooting.
+
+
 ## Installation
 - Installed prerequisites, 'dnf install -y curl'
 - Installed Pi-hole, 'curl -sSL https://install.pi-hole.net | bash'
