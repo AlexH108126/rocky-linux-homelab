@@ -20,4 +20,5 @@ Cockpit will be used as a web-based system management for my headless rocky linu
 Solutions:
 1. Root cause of unreachable http path was that firewalld was blocking port 9090 by default. Added a permanent rule on the firewall telling it allow listening on port 9090.
 2. Samba and NAS warnings were due to incorrect/missing permissions on the client side of the connections. Added the correct samba permissions to the clients connecting to the remote NAS storage.
+
 3 & 4. Cockpit began reporting SELinux alerts saying, 'preventing /path/to/smbd from search access on dir /path/nas.' Though the NAS was fully functional and clients could access it. Fix was to simply label the shared directories correctly from, 'unlabeled_t' to 'samba_share_t' and apply label persistency. Thankfully, SELinux show hints and command suggestions to fix these errors, making the troubleshooting simple and straightforward for a novice like myself.
