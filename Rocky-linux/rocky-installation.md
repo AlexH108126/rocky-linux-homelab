@@ -24,7 +24,7 @@ Device
 - wheel group access: enabled (given sudo privileges)
 - Password authentication: enabled initially (SSH hardened later)
 
-## [!Issues experienced after first boot!]
+## [!Troubleshooting Rocky Linux Server!]
 - dnf updates failed. Could not download latest repo. Noticed server had no network configurations/no DHCP offer.
 - NIC interface was present but was disconnected, meaning that laptop could not connect to DHCP server and obtain the configurations necessary for internet access.
 - Network interfaces are not automatically up in some minimal installs. Discovered this by using 'NetworkManager.'
