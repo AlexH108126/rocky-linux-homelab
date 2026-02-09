@@ -6,11 +6,15 @@ and supporting Linux/Windows clients. The Rocky server acts as the centrol SSH t
 ## [Installation]
 - I used OpenSSH as the daemon on both client machines.
 - A key must be generated so that the server can authenticate the clients.
+
+
 Linux mint:
     - ssh-keygen -t ed25519 -C "mint-client"
     - default location: ~/.ssh/id_ed25519, enter a passphrase when prompted for one
     - Install the public keys on the rocky server: ssh-copy-id -i ~/.ssh/id_ed25519.pub user@SERVER_IP
     - keys are appended to: ~/.ssh/authorized_keys
+
+
 Windows 11:
     - open up PuTTYgen
     - select 'Type: ed25519'
@@ -47,12 +51,38 @@ Windows 11:
 
 
 
-<img width="543" height="174" alt="sshd_configs" src="https://github.com/user-attachments/assets/9054e1e2-9eee-476c-ba5c-e761b5e8deb4" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## [SSH Security Configurations]
 <img width="543" height="174" alt="sshd_configs" src="https://github.com/user-attachments/assets/9054e1e2-9eee-476c-ba5c-e761b5e8deb4" />
 
-![ssh_login](https://github.com/user-attachments/assets/62706926-92d8-41fe-bb13-49de983a6455)
+## [Remote SSH Login Display]
 ![ssh_login](https://github.com/user-attachments/assets/62706926-92d8-41fe-bb13-49de983a6455)
 
+## [Firewalld Configurations]
 ![firewall_services](https://github.com/user-attachments/assets/fc1435a6-c435-4476-8253-afe4f3a2957a)
-![firewall_services](https://github.com/user-attachments/assets/fc1435a6-c435-4476-8253-afe4f3a2957a)
+
 
