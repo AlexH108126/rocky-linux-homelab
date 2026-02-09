@@ -1,3 +1,4 @@
+
 ## [Purpose]
 Classic minimal-install trick. The time daemon isnt automatically installed. Rocky minimal doesnt not ship with an NTP client by default. Cockpit has an option for automatic NTP timeclock but
 it will be greyed out if there isnt one installed. You may have time drifts in your logs causing errors, and authentication/security problems come up sporadically.
@@ -14,3 +15,16 @@ it will be greyed out if there isnt one installed. You may have time drifts in y
 - Enabled NTP at the system level and verified it was configured properly.
     - sudo timedatectl set-ntp true
     - timedatectl: 'system clock syn: yes.' 'NTP services: active'
+
+
+
+
+
+
+
+
+
+
+
+## [chronyd & NTP service running]
+![chronyd_ntp](https://github.com/user-attachments/assets/b43be6ce-9f31-4e8c-b9ed-7391ad8885c3)
