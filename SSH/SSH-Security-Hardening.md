@@ -1,3 +1,9 @@
+<img width="543" height="174" alt="sshd_configs" src="https://github.com/user-attachments/assets/20296a37-cb0d-46d6-a959-206b0c2f9ad4" />
+<img width="543" height="174" alt="sshd_configs" src="https://github.com/user-attachments/assets/20296a37-cb0d-46d6-a959-206b0c2f9ad4" />
+![ssh_login](https://github.com/user-attachments/assets/bd8d9a22-2277-4f96-8f8e-363a26af38e1)
+![ssh_login](https://github.com/user-attachments/assets/bd8d9a22-2277-4f96-8f8e-363a26af38e1)
+![firewall_services](https://github.com/user-attachments/assets/1dce3b28-306f-43c8-81df-d48fda17d9f1)
+![firewall_services](https://github.com/user-attachments/assets/1dce3b28-306f-43c8-81df-d48fda17d9f1)
 ## [Purpose]
 To secure remote access to a Rocky Linux server by enforcing SSH key-based authentication only, disabling password authentication, changing the default ssh port, configuring a legal/security login banner, 
 and supporting Linux/Windows clients. The Rocky server acts as the centrol SSH target and specific clients initiate connections using private keys only.
