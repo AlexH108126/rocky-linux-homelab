@@ -10,9 +10,7 @@ Linux mint:
     - ssh-keygen -t ed25519 -C "mint-client"
     - default location: ~/.ssh/id_ed25519, enter a passphrase when prompted for one
     - Install the public keys on the rocky server: ssh-copy-id -i ~/.ssh/id_ed25519.pub user@SERVER_IP
-    - keys are appended to: ~/.ssh/authorized_keys
-
-
+    - keys are appended to: ~/.ssh/authorized_keys    
 Windows 11:
     - open up PuTTYgen
     - select 'Type: ed25519'
