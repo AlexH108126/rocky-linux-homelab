@@ -1,3 +1,4 @@
+
 ## [Rocky Linux 9.7 Installation - Headless Server Setup:]
 - Device: HP Beats Laptop
 - Role: Headless homelab server (Pi-hole, Cockpit, NAS)
@@ -39,3 +40,23 @@ Solutions:
 - Edited the logind.conf file to disable the lid switch power0ff triggers, and then restarted logind to run with the new settings.
 - Made sure SSH tools were installed, enabled, and worked properly. Hardened SSH by disabling root logins and requiring password authentication. Then, restarted sshd.
 - Removed the physical DC battery from the laptop. It will now be AC powered via the charging adapter being plugged permanently. The DC battery now acts as emergency power backup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## [Network Interfaces]
+![nic_status](https://github.com/user-attachments/assets/78b9d0dc-7d39-4065-b40f-31274b11775d)
+## [Running Services]
+![running_services](https://github.com/user-attachments/assets/775305a9-f7eb-4bb6-bf1e-9a81de078063)
