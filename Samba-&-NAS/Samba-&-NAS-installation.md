@@ -43,3 +43,21 @@ The NAS storage lives on a dedicated partition, mounted persistently, and secure
     - create a mount point
     - create a credentials file in '/root' directory for added security, contents should be 'username=nassrv <TAB> password=sambapassword.' secure it by changing permissions of file to '600'
     - make the mount persistent by editing the '/etc/fstab' file
+
+
+
+
+
+
+
+
+
+
+
+
+
+## [Split Partitions]
+![storage_info](https://github.com/user-attachments/assets/28f4d7f9-61cd-4edd-bd17-4cea7562cfb0)
+## [NAS Mounted on Remote Client]
+![nas_verified](https://github.com/user-attachments/assets/4f0621e8-e63f-4cbd-a01e-7c929d849904)
+
