@@ -6,8 +6,6 @@ and supporting Linux/Windows clients. The Rocky server acts as the centrol SSH t
 ## [Installation]
 - I used OpenSSH as the daemon on both client machines.
 - A key must be generated so that the server can authenticate the clients.
-
-
 Linux mint:
     - ssh-keygen -t ed25519 -C "mint-client"
     - default location: ~/.ssh/id_ed25519, enter a passphrase when prompted for one
