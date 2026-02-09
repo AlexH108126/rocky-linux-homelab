@@ -42,7 +42,7 @@ Windows 11:
 - start by creating a banner file
     - sudo nano /etc/issue.net
     - insert text you want shown every time someone start an SSH session with your server. EX: ======WARNING! AUTHORIZED USE ONLY.======
- 
+     
 
 
 
@@ -78,5 +78,7 @@ Windows 11:
 ## [Remote SSH Login Display]
 ![ssh_login](https://github.com/user-attachments/assets/62706926-92d8-41fe-bb13-49de983a6455)
 
+## [Firewall COnfigurations]
+![firewall_services](https://github.com/user-attachments/assets/d65f9020-9cc8-421e-8166-21e9a9b60770)
 
 
