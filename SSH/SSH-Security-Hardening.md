@@ -78,7 +78,7 @@ Windows 11:
 ## [Remote SSH Login Display]
 ![ssh_login](https://github.com/user-attachments/assets/62706926-92d8-41fe-bb13-49de983a6455)
 
-## [Firewall COnfigurations]
+## [Firewall Configurations]
 ![firewall_services](https://github.com/user-attachments/assets/d65f9020-9cc8-421e-8166-21e9a9b60770)
 
 
