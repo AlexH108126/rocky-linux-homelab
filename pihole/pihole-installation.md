@@ -1,13 +1,13 @@
 ## [Purpose]
-I wanted to see what made DNS function and operate properly. The goal was to have a more in-depth understanding of how a DNS server worked and what services made it efficient. I did not use unbound services as a local DNS resolver this time as that needs more configuring and troubleshooting.
+I wanted to see what made DNS function and operate properly. The goal was to have a more in-depth understanding of how a DNS server worked and what services made it efficient.
 
 
 ## [Installation]
-- Installed prerequisites, 'dnf install -y curl'
-- Installed Pi-hole, 'curl -sSL https://install.pi-hole.net | bash'
+- Installed curl package, 'dnf install -y curl'
+- Installed Pi-hole via official script, 'curl -sSL https://install.pi-hole.net | bash'
 - During setup: chose LAN interface, public upstream DNS (Quad9), accept defaults
-- COnfigured pihole with a static IP using DHCP reservation on my home router and set it's IP as the default DNS for the entire network. Also, Set the server's default DNS address to be its own localhost address (127.0.0.1) using NetworkManager tool (nmcli).
-- verified i was able to access web GUI and entered in the default credentials, which i later changed and added 2FA to the pi-hole GUI login.
+- COnfigured pihole with a static IP using DHCP reservation and set Pi-hole IP as the default DNS for the entire network. Set Linux server's default DNS address to be its own localhost address (127.0.0.1) using NetworkManager tool (nmcli).
+- verified web GUI was accessible and signed in. I later added 2FA to the pi-hole login for additional security.
 
 
 ## [!Troubleshooting pi-hole!]
