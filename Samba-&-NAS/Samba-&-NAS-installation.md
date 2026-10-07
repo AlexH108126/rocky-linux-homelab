@@ -1,35 +1,32 @@
 ## [Purpose]
-COnfigure a rocky linux headless server to provide reliable NAS storage over the network using samba, accessible permanently from: Linux clients (mint) and windows 11 clients.
-The NAS storage lives on a dedicated partition, mounted persistently, and secured using proper Linux permissions, SELinux labeling, and Samba authentication.
+Setup rocky linux headless server to use as local NAS storage using samba software. The NAS storage lives on a dedicated partition, mounted persistently, and secured using proper Linux permissions, SELinux, and Samba authentication.
 
 
 ## [Samba & NAS setup/installation]
 - The initial disk state on the system used a GPT disk with:
-    - /boot/efi (630MB)
-    - /boot (1GB)
     - sda3, the LVM physical volume (1TB)
 - inside the 'sda3' LVM:
     - / --*root* (75GB, xfs)
     - /home (920GB, xfs)
     - swap (7GB)
-- The plan was to repurpose a portion of the storage for NAS use. I would create a dedicated mount point named, '/srvr/nas' and avoid mixing data with '/home.'
-- I began by creating the NAS directory, set ownership, and establish permissions ('nassrv' means specifically for NAS access, 'setgid' (2) makes the exec run with privileges of the group of the file)
+- I repurpose a portion of the storage for NAS use. I created a dedicated directory, '/srvr/nas' to avoid mixing data with '/home' folder.
+- I began by creating the NAS directory, set ownership, and establish permissions.
     - sudo mkdir -p /srv/nas
     - sudo chown -R nassrv:nassrv /srvr/nas
     - sudo chmod 2775 /srvr/nas
-- I installed samba from the rocky repos, enabled and started the services, and edited the samba configuration file with custom procedures.
+- I installed samba, enabled and started the services, and edited the samba configuration file.
 - I added a samba user with its own credentials and enabled the new samba user.
     - sudo smbpasswd -a nassrv
     - sudo smbpasswd -e nassrv
-- In the '/etc/samba/smb.conf' file, i inserted custom content specific to my samba setup. Then, restarted samba services on server.
+- In the '/etc/samba/smb.conf' file, i added specific configurations for my samba setup. Then, restarted samba services.
 
 ## [Splitting '/home' storage:]
-- For the NAS storage, i split the '/home' directory into 2 separate partitions: '/home' will be 120GB, '/srvr/nas' will be 600GB, and i added the last 200GB into the '/ ' root directory.
+- For the NAS storage, i split the '/home' directory into 2 separate partitions: '/home' will be 120GB, '/srvr/nas' will be 600GB, and i extended the '/ ' root directory with the last 200GB.
 - the steps i took:
-    - killed processes and unmounted '/home'
-    - removed the Logical Volume, instantly making the 920GB into free space
-    - created the 600GB NAS logical volume, formatted 'dev/rl/nas' xfs, mounted to NAS directory, and made it persistent by adding to '/etc/fstab'
-    - then, i recreated the '/home' as a 120GB directory and extended the root logical volume '/ ' with the 200GB left of free space
+    - killed all processes and unmounted '/home'
+    - deleted the Logical Volume, instantly making the 920GB into free space
+    - created the 600GB NAS logical volume, formatted 'dev/rl/nas' xfs, mounted to NAS directory, and made it persistent by adding it to '/etc/fstab'
+    - then, i remade the '/home' with 120GB and extended the root logical volume '/ ' with the 200GB of free space left
  
 
 ## [Mounting NAS permanently to remote clients]
@@ -41,7 +38,7 @@ The NAS storage lives on a dedicated partition, mounted persistently, and secure
 - Linux clients (trickier):
     - installed 'cifs-utils' package on the client machine
     - create a mount point
-    - create a credentials file in '/root' directory for added security, contents should be 'username=nassrv <TAB> password=sambapassword.' secure it by changing permissions of file to '600'
+    - create a credentials file in '/root' directory for added security. Changed file permissions to '600', meaning only file owner can read & write to it
     - make the mount persistent by editing the '/etc/fstab' file
 
 
