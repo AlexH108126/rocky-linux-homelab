@@ -20,7 +20,7 @@ Setup rocky linux headless server to use as local NAS storage using samba softwa
     - sudo smbpasswd -e nassrv
 - In the '/etc/samba/smb.conf' file, i added specific configurations for my samba setup. Then, restarted samba services.
 
-## [Splitting '/home' storage:]
+## [Splitting '/home' storage]
 - For the NAS storage, i split the '/home' directory into 2 separate partitions: '/home' will be 120GB, '/srvr/nas' will be 600GB, and i extended the '/ ' root directory with the last 200GB.
 - the steps i took:
     - killed all processes and unmounted '/home'
